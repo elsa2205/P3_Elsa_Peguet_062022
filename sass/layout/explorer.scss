@@ -1,0 +1,26 @@
+@use "../utils/mixins";
+
+.explorer {
+    text-align: center;
+& h2 {
+    margin-top: 2rem;
+    font-size: 2rem;
+}
+& p {
+    font-size: 1rem;
+}
+& button {
+    @include mixins.base-button;
+}
+
+}
+
+.loader {
+    position: fixed;
+    background-color: red;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
