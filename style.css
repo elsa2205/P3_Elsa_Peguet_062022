@@ -39,6 +39,11 @@ header {
   position: relative;
 }
 
+.marglogo {
+  width: 25rem;
+  height: 5rem;
+}
+
 .city {
   display: flex;
   align-items: center;
@@ -51,13 +56,18 @@ header {
 .city i {
   font-size: 1.5rem;
 }
+.city h2 {
+  font-size: 1rem;
+}
 
 .explorer {
   text-align: center;
+  margin: 2rem;
 }
 .explorer h2 {
   margin-top: 2rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  margin: 1rem;
 }
 .explorer p {
   font-size: 1rem;
@@ -74,6 +84,7 @@ header {
   cursor: pointer;
   box-shadow: 2px 1px 8px -3px #7e7e7e;
   background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  font-size: 1rem;
 }
 .explorer button:hover {
   transform: scale(1.02);
@@ -82,14 +93,40 @@ header {
 
 .loader {
   position: fixed;
-  background-color: red;
+  display: grid;
+  place-items: center;
+  background-color: #ffffff;
   height: 100vh;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: 1;
+  opacity: 0.9;
+  animation: disappear 200ms 2s forwards;
+  transform-origin: top;
+}
+.loader::after {
+  content: "";
+  height: 150px;
+  width: 150px;
+  border-top: 5px solid #99e2d0;
+  border-bottom: 5px solid #99e2d0;
+  border-radius: 50%;
+  animation: spin 1s infinite ease-in-out;
+  animation-iteration-count: 2;
 }
 
+@keyframes disappear {
+  to {
+    transform: scale(0);
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
 .tuto {
   counter-reset: steps;
   margin-bottom: 2rem;
@@ -105,6 +142,8 @@ header {
 }
 .tuto li {
   position: relative;
+  display: flex;
+  align-items: center;
   list-style: none;
   background-color: #f6f6f6;
   padding: 1.5rem 2rem;
@@ -128,7 +167,11 @@ header {
   transform: translateY(-50%);
 }
 .tuto li:hover {
-  transform: none scale(1.02);
+  transform: scale(1.02);
+  background-color: #f2eafb;
+}
+.tuto li:hover i::before {
+  color: #9356dc;
 }
 .tuto li i.fas {
   margin-right: 1rem;
@@ -169,6 +212,7 @@ header {
   height: 15rem;
   border-radius: 1rem 1rem 0 0;
   background-size: cover;
+  background-position: center;
 }
 #homepage .menus .card__image-1 {
   background-image: url("../../images/assets/menu-1.jpg");
@@ -239,7 +283,7 @@ footer {
   margin: auto;
   padding-left: 20px;
   background-color: #353535;
-  padding: 1 2rem;
+  padding: 1rem 2rem;
   color: white;
 }
 footer h2 {
@@ -249,10 +293,6 @@ footer h2 {
 }
 footer p {
   padding: 0.2rem;
-}
-
-.footer__left {
-  margin-right: 200rem;
 }
 
 @keyframes appear {
@@ -293,7 +333,7 @@ body {
   width: 100%;
   height: 70vh;
   object-fit: cover;
-  object-position: center bottom;
+  object-position: center;
 }
 #page-resto .resto__title {
   margin-top: -2rem;
@@ -430,8 +470,8 @@ body {
   display: grid;
   place-items: center;
   background: white;
-  aspect-ratio: 1;
-  width: 2rem;
+  height: 1rem;
+  width: 1rem;
   border-radius: 1rem;
   color: #99e2d0;
 }
