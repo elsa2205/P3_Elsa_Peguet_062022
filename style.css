@@ -393,11 +393,6 @@ body {
 #page-resto .resto-main {
   padding: 0 1rem;
 }
-#page-resto .menus {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-}
 @media (max-width: 1000px) {
   #page-resto .menus {
     grid-template-columns: 1fr;

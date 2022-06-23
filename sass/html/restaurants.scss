@@ -49,9 +49,9 @@ body {
     }
     
     .menus {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
+        //display: grid;
+        // grid-template-columns: repeat(3, 1fr);
+        // gap: 1rem;
          @media (max-width: variables.$breakpoint){
             grid-template-columns: 1fr;
         }
