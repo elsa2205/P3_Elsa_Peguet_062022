@@ -48,8 +48,9 @@ header {
 }
 
 .marglogo {
-    height: 5rem;
-    width: 25rem
+    background-image: url(../images/logo/ohmyfood.png);
+    /* height: 5rem;
+    width: 25rem */
 }
 
 .city {
