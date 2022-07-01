@@ -52,6 +52,9 @@ header {
     /* height: 5rem;
     width: 25rem */
 }
+#homepage .menus .card__image-1 {
+    background-image: url(../images/logo/ohmyfood.png)
+}
 
 .city {
     align-items: center;
