@@ -1,0 +1,62 @@
+@use "./../utils/colors";
+
+footer {
+    margin: auto;
+    padding-left: 20px;
+    background-color: colors.$darkgrey;
+    padding: 1rem 2rem;
+    
+    color: white;
+    h2 {
+        font-family: "Shrikhand", "sans-serif";
+        font-weight: 500;
+        padding: 1rem 0;
+    }
+    p {
+        padding: 0.2rem;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+      }
+     .container {
+        max-width: 1280px;
+        margin: auto;
+        position: relative;
+      }
+     
+     .footer__listElt {
+        margin: .5rem 0;
+      }
+     .footer__link {
+        color: #fff;
+        text-decoration: none;
+      }
+     .footer__icon {
+        width: 1.2rem;
+        margin-right: .5rem;
+      }
+     .fa-utensils::before {
+        content: "\f2e7";
+      }
+      .fa, .fas {
+        -moz-osx-font-smoothing: grayscale;
+        display: inline-block;
+        font-size: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        line-height: 1;
+      }
+
+}
+
+
+
+
